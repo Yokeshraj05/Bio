@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@tailwind utilities;
+
+@layer utilities {
+  .animate-tap {
+    animation: hammerTap 0.3s ease-in-out;
+  }
+
+  @keyframes hammerTap {
+    0% {
+      transform: translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateY(5px) rotate(-20deg);
+    }
+    100% {
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+}
