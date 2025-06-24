@@ -26,7 +26,7 @@ function GlassBreak() {
         />
 
         {count < 3 && (
-            <div className='absolute inset-0 bg-white bg-opacity-30 backdrop-blur-sm rounded-full z-10 transition-all duration-500'>
+            <div className='absolute inset-0 bg-white bg-opacity-30 backdrop-blur-sm rounded-full z-9 transition-all duration-500'>
                 {count > 0 && (
                     <img
                     src = {`/Crack${count}.png`}
@@ -38,6 +38,12 @@ function GlassBreak() {
         )}
 
         {count < 3 && (
+        <>
+         {count === 0 && (
+            <p className="absolute bottom-14 left-1/2 -translate-x-1/2 text-sm text-gray-800 font-semibold z-20">
+              Hit the hammer symbol 3 times
+            </p>
+          )}
             <button
             onClick={hammerClick}
             className={`absolute bottom-0 left-1/2 -translate-x-1/2 text-4xl text-gray-700 z-20 transform transition-transform duration-300 ${
@@ -46,6 +52,7 @@ function GlassBreak() {
             >
                 <FaHammer />
             </button>
+        </>
         )}
     </div>
   );
