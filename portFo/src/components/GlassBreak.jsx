@@ -18,7 +18,7 @@ function GlassBreak() {
         }
     }
   return (
-    <div className='relative w-80 h-80 mx-auto mt-10'>
+    <div className='relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 mx-auto mt-6 sm:mt-10'>
         <img
         src={myImg}
         alt='myimg'
@@ -40,13 +40,13 @@ function GlassBreak() {
         {count < 3 && (
         <>
          {count === 0 && (
-            <p className="absolute bottom-14 left-1/2 -translate-x-1/2 text-sm text-gray-800 font-semibold z-20">
-              Hit the hammer symbol 3 times
+            <p className="absolute bottom-12 sm:bottom-14 left-1/2 -translate-x-1/2 text-xs sm:text-sm text-gray-800 font-semibold z-20 text-center px-2">
+              Hit the hammer 3 times
             </p>
           )}
             <button
             onClick={hammerClick}
-            className={`absolute bottom-0 left-1/2 -translate-x-1/2 text-4xl text-gray-700 z-20 transform transition-transform duration-300 ${
+            className={`absolute bottom-0 left-1/2 -translate-x-1/2 text-2xl sm:text-3xl lg:text-4xl text-gray-700 z-20 transform transition-transform duration-300 ${
             isTapping ? 'animate-tap' : ''
           }`}
             >
