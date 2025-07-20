@@ -100,55 +100,137 @@
 // this is for later use to link with backend
 
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Contact = () => {
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2
+      }
+    }
+  };
+
+  const itemVariants = {
+    hidden: { y: 30, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut"
+      }
+    }
+  };
+
   return (
-    <section className="min-h-screen px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-white text-gray-800">
+    <motion.section 
+      initial="hidden"
+      animate="visible"
+      variants={containerVariants}
+      className="min-h-screen px-4 sm:px-6 lg:px-8 py-8 sm:py-12 bg-gradient-to-br from-blue-50 via-white to-purple-50 text-gray-800"
+    >
       <div className="max-w-3xl mx-auto text-center">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-blue-600 mb-4">Contact Me</h2>
-        <p className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10">Feel free to reach out via the details below 👇</p>
+        <motion.h2 
+          variants={itemVariants}
+          whileHover={{ scale: 1.05 }}
+          className="text-2xl sm:text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4 cursor-hover"
+        >
+          Contact Me
+        </motion.h2>
+        
+        <motion.p 
+          variants={itemVariants}
+          className="text-sm sm:text-base lg:text-lg text-gray-600 mb-8 sm:mb-10"
+        >
+          Feel free to reach out via the details below 👇
+        </motion.p>
 
         <div className="space-y-4 sm:space-y-6 text-left max-w-lg mx-auto text-sm sm:text-base lg:text-lg">
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-blue-50 rounded-lg">
+          <motion.div 
+            variants={itemVariants}
+            whileHover={{ 
+              scale: 1.02, 
+              x: 10,
+              boxShadow: "0 10px 30px rgba(59, 130, 246, 0.2)" 
+            }}
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg border border-blue-100 cursor-hover"
+          >
             <span className="font-semibold">📧 Email:</span>
-            <a href="mailto:yokeshraj6662@gmail.com" className="text-blue-600 hover:underline break-all transition-colors duration-200">
+            <motion.a 
+              href="mailto:yokeshraj6662@gmail.com" 
+              whileHover={{ scale: 1.05 }}
+              className="text-blue-600 hover:text-purple-600 break-all transition-colors duration-200 cursor-hover"
+            >
               yokeshraj6662@gmail.com
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-blue-50 rounded-lg">
+          <motion.div 
+            variants={itemVariants}
+            whileHover={{ 
+              scale: 1.02, 
+              x: 10,
+              boxShadow: "0 10px 30px rgba(59, 130, 246, 0.2)" 
+            }}
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg border border-blue-100 cursor-hover"
+          >
             <span className="font-semibold">📱 Phone:</span>
-            <a href="tel:+916383038699" className="text-blue-600 hover:underline transition-colors duration-200">
+            <motion.a 
+              href="tel:+916383038699" 
+              whileHover={{ scale: 1.05 }}
+              className="text-blue-600 hover:text-purple-600 transition-colors duration-200 cursor-hover"
+            >
               +91 63830 38699
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-blue-50 rounded-lg">
+          <motion.div 
+            variants={itemVariants}
+            whileHover={{ 
+              scale: 1.02, 
+              x: 10,
+              boxShadow: "0 10px 30px rgba(59, 130, 246, 0.2)" 
+            }}
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg border border-blue-100 cursor-hover"
+          >
             <span className="font-semibold">🔗 LinkedIn:</span>
-            <a
+            <motion.a
               href="https://www.linkedin.com/in/yokie-yokie-4b016a290"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline break-all transition-colors duration-200"
+              whileHover={{ scale: 1.05 }}
+              className="text-blue-600 hover:text-purple-600 break-all transition-colors duration-200 cursor-hover"
             >
               linkedin.com/in/yokie-yokie-4b016a290
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
 
-          <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-blue-50 rounded-lg">
+          <motion.div 
+            variants={itemVariants}
+            whileHover={{ 
+              scale: 1.02, 
+              x: 10,
+              boxShadow: "0 10px 30px rgba(59, 130, 246, 0.2)" 
+            }}
+            className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-2 p-3 sm:p-4 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl shadow-lg border border-blue-100 cursor-hover"
+          >
             <span className="font-semibold">🌐 GitHub:</span>
-            <a
+            <motion.a
               href="https://github.com/Yokeshraj05"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 hover:underline break-all transition-colors duration-200"
+              whileHover={{ scale: 1.05 }}
+              className="text-blue-600 hover:text-purple-600 break-all transition-colors duration-200 cursor-hover"
             >
               github.com/Yokeshraj05
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
