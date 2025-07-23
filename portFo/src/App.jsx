@@ -13,6 +13,20 @@ import CustomCursor from "./components/CustomCursor";
 const App = () => {
   const location = useLocation();
 
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    const handleResize = () => {
+      const width = window.innerWidth;
+      setShowCursor(width >= 768);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const pageVariants = {
     initial: { opacity: 0, x: -100 },
     in: { opacity: 1, x: 0 },
@@ -27,7 +41,7 @@ const App = () => {
 
   return (
     <div className="min-h-screen relative" style={{ cursor: 'none' }}>
-      <CustomCursor />
+      {showCursor && <CustomCursor />}
       <Header />
       <AnimatePresence mode="wait">
         <Routes location={location} key={location.pathname}>
