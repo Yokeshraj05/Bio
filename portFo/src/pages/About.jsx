@@ -75,7 +75,7 @@ const About = () => {
             }}
             className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 sm:p-6 rounded-lg shadow-lg border border-blue-100 mb-4 cursor-hover"
           >
-            <p className="text-base sm:text-lg font-medium">Frontend Developer (3-Mon)</p>
+            <p className="text-base sm:text-lg font-medium">Frontend Developer</p>
             <p className="text-sm sm:text-base text-gray-700">CognigenNxt</p>
             <ul className="list-disc list-inside text-sm sm:text-base text-gray-600 mt-2 space-y-1">
               <li>Built web pages for resort booking and admin management</li>
@@ -91,7 +91,7 @@ const About = () => {
             }}
             className="bg-gradient-to-r from-blue-50 to-purple-50 p-4 sm:p-6 rounded-lg shadow-lg border border-blue-100 cursor-hover"
           >
-            <p className="text-base sm:text-lg font-medium">Frontend Developer Intern (6-Mon)</p>
+            <p className="text-base sm:text-lg font-medium">Frontend Developer Intern </p>
             <p className="text-sm sm:text-base text-gray-700">CognigenNxt</p>
             <ul className="list-disc list-inside text-sm sm:text-base text-gray-600 mt-2 space-y-1">
               <li>Built web pages for E-Commerce Website</li>

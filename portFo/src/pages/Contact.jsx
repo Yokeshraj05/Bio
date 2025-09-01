@@ -204,7 +204,7 @@ const Contact = () => {
               whileHover={{ scale: 1.05 }}
               className="text-blue-600 hover:text-purple-600 break-all transition-colors duration-200 cursor-hover"
             >
-              linkedin.com/in/yokie-yokie-4b016a290
+              linkedin.com/Yokie
             </motion.a>
           </motion.div>
 
@@ -225,10 +225,18 @@ const Contact = () => {
               whileHover={{ scale: 1.05 }}
               className="text-blue-600 hover:text-purple-600 break-all transition-colors duration-200 cursor-hover"
             >
-              github.com/Yokeshraj05
+              github.com/Yokie
             </motion.a>
           </motion.div>
         </div>
+
+        <motion.p 
+          variants={itemVariants}
+          className="text-sm sm:text-base lg:text-lg text-gray-600 mt-8 sm:mt-10"
+        >
+          🚀 I’m always open to suggestions! Your feedback will help me improve and sharpen my skills.
+        </motion.p>
+
       </div>
     </motion.section>
   );

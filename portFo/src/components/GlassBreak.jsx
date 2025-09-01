@@ -3,7 +3,11 @@ import { useState } from 'react';
 import { FaHammer } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import myImg from '../assets/myimg.jpg';
+import Crack1 from "../assets/Crack1.png";
+import Crack2 from "../assets/Crack2.png";
 
+
+const cracks = [null, Crack1, Crack2];
 function GlassBreak() {
 
     const [count, setCount] = useState(0);
@@ -44,7 +48,7 @@ function GlassBreak() {
                     initial={{ scale: 0, opacity: 0 }}
                     animate={{ scale: 1, opacity: 1 }}
                     transition={{ duration: 0.5, ease: "easeOut" }}
-                    src = {`/Crack${count}.png`}
+                    src = {cracks[count]}
                     alt='crack'
                     className='w-full h-full object-cover'
                     />
