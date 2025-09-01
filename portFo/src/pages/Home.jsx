@@ -2,6 +2,7 @@ import React from 'react'
 import GlassBreak from '../components/GlassBreak'
 import { motion } from 'framer-motion'
 import ParticleBackground from '../components/ParticleBackground'
+import { Link } from 'react-router-dom';
 
 function Home() {
   return (
@@ -81,48 +82,49 @@ function Home() {
         transition={{ delay: 1.3, duration: 0.6 }}
         className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-8 md:gap-12 lg:gap-20 mt-6 sm:mt-8 w-full max-w-md sm:max-w-none relative z-10"
       >
-        <motion.a
+        <motion.div
           whileHover={{ 
             scale: 1.1, 
             y: -5,
             boxShadow: "0 10px 25px rgba(59, 130, 246, 0.3)"
           }}
           whileTap={{ scale: 0.95 }}
-          href="/contact"
-          className="bg-gradient-to-r from-blue-600 to-purple-600 font-bold text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center text-sm sm:text-base cursor-hover relative overflow-hidden"
         >
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0"
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          />
-          <span className="relative z-10">
-          Hire Me
-          </span>
-        </motion.a>
-
-        <motion.a
+          <Link
+            to="/contact"
+            className="bg-gradient-to-r from-blue-600 to-purple-600 font-bold text-white px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 text-center text-sm sm:text-base cursor-hover relative overflow-hidden"
+          >
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-purple-600 to-pink-600 opacity-0"
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+            <span className="relative z-10">Hire Me</span>
+          </Link>
+        </motion.div>
+      
+        <motion.div
           whileHover={{ 
             scale: 1.1, 
             y: -5,
             boxShadow: "0 10px 25px rgba(0, 0, 0, 0.1)"
           }}
           whileTap={{ scale: 0.95 }}
-          href="/Resume"
-          className="bg-white font-bold text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl border-2 border-transparent hover:border-blue-600 transition-all duration-300 text-center text-sm sm:text-base cursor-hover relative overflow-hidden"
         >
-          <motion.span
-            className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0"
-            whileHover={{ opacity: 1 }}
-            transition={{ duration: 0.3 }}
-          />
-          <motion.span 
-            className="relative z-10"
-            whileHover={{ color: "#ffffff" }}
+          <Link
+            to="/resume"
+            className="bg-white font-bold text-gray-800 px-4 sm:px-6 py-2 sm:py-3 rounded-xl sm:rounded-2xl shadow-lg hover:shadow-xl border-2 border-transparent hover:border-blue-600 transition-all duration-300 text-center text-sm sm:text-base cursor-hover relative overflow-hidden"
           >
-          View Resume
-          </motion.span>
-        </motion.a>
+            <motion.span
+              className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 opacity-0"
+              whileHover={{ opacity: 1 }}
+              transition={{ duration: 0.3 }}
+            />
+            <motion.span className="relative z-10" whileHover={{ color: "#ffffff" }}>
+              View Resume
+            </motion.span>
+          </Link>
+        </motion.div>
       </motion.div>
 
     </div>

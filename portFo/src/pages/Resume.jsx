@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import myResume from '../assets/YOKESH-SDE.pdf';
 
 const Resume = () => {
   return (
@@ -30,7 +31,7 @@ const Resume = () => {
         className="w-full sm:w-11/12 md:w-4/5 lg:w-3/4 xl:w-2/3 h-[70vh] sm:h-[80vh] lg:h-[85vh] xl:h-[90vh] rounded-xl overflow-hidden shadow-2xl border border-blue-100"
       >
         <iframe
-        src="/YOKESH-SDE.pdf"
+        src={myResume}
         title="Resume"
         className="w-full h-full bg-white"
         ></iframe>
@@ -44,7 +45,7 @@ const Resume = () => {
       >
         If the resume doesn't load properly, you can{' '}
         <motion.a 
-          href="/YOKESH-SDE.pdf" 
+          href={myResume} 
           download 
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}

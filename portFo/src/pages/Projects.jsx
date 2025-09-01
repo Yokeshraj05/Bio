@@ -6,15 +6,15 @@ const projects = [
     title: 'Resort Booking System',
     description: 'A responsive booking platform for users and resort admins with API integration.',
     techStack: ['React', 'Tailwind CSS', 'Flask', 'MySQL'],
-    liveLink: '',
-    githubLink: 'https://github.com/yourusername/resort-booking',
+    liveLink: 'https://www.kapni.in/',
+    githubLink: '',
   },
   {
     title: 'Portfolio Website',
     description: 'A personal portfolio website built with React and Tailwind CSS.',
     techStack: ['React', 'Tailwind CSS'],
-    liveLink: '',
-    githubLink: 'https://github.com/yourusername/portfolio',
+    liveLink: 'https://yokeshraj05.github.io/Bio/',
+    githubLink: '',
   },
   // Add more projects here
 ];
@@ -94,7 +94,7 @@ const Projects = () => {
                 <strong>Tech Stack:</strong> {project.techStack.join(', ')}
               </p>
               <div className="flex flex-col sm:flex-row justify-between gap-2 sm:gap-0 text-xs sm:text-sm font-medium relative z-10">
-                {/* <motion.a 
+                <motion.a 
                   href={project.liveLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
@@ -103,8 +103,8 @@ const Projects = () => {
                   className="text-blue-600 hover:text-purple-600 transition-colors duration-200 text-center sm:text-left cursor-hover"
                 >
                   🔗 Live Demo
-                </motion.a> */}
-                <motion.a 
+                </motion.a>
+                {/* <motion.a 
                   href={project.githubLink} 
                   target="_blank" 
                   rel="noopener noreferrer" 
@@ -113,7 +113,7 @@ const Projects = () => {
                   className="text-blue-600 hover:text-purple-600 transition-colors duration-200 text-center sm:text-right cursor-hover"
                 >
                   💻 GitHub
-                </motion.a>
+                </motion.a> */}
               </div>
             </motion.div>
           ))}
